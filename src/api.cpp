@@ -1,4 +1,5 @@
 #include <windows.h>
+#include <cstring>
 
 #include "api.h"
 
