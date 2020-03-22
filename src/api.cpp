@@ -1,5 +1,6 @@
-#include <windows.h>
 #include <cstring>
+#include <wchar.h>
+#include <windows.h>
 
 #include "api.h"
 
