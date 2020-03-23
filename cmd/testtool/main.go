@@ -17,6 +17,8 @@ func main() {
 
 	us := []uint16{}
 
+	fmt.Printf("@@@foo %+v\n", foo)
+
 	for i := 0; i < 1024; i += 2 {
 		u := *(*uint16)(unsafe.Pointer(foo.Name + uintptr(i)))
 
