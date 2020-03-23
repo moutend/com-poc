@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	var foo types.RawFoo
+	var foo *types.RawFoo
 
 	dll.ProcDoSomething.Call(uintptr(unsafe.Pointer(&foo)))
 

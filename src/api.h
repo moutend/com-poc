@@ -5,5 +5,5 @@
 #define export __declspec(dllexport)
 
 extern "C" {
-export void __stdcall DoSomething(Foo *pFoo);
+export void __stdcall DoSomething(Foo **ppFoo);
 }

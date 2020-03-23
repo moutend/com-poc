@@ -3,12 +3,12 @@
 
 #include "api.h"
 
-void __stdcall DoSomething(Foo *pFoo) {
-  pFoo = reinterpret_cast<Foo *>(CoTaskMemAlloc(sizeof(Foo)));
-  pFoo->Name = reinterpret_cast<LPWSTR>(CoTaskMemAlloc(64));
+void __stdcall DoSomething(Foo **ppFoo) {
+  (*ppFoo) = reinterpret_cast<Foo *>(CoTaskMemAlloc(sizeof(Foo)));
+  (*ppFoo)->Name = reinterpret_cast<LPWSTR>(CoTaskMemAlloc(64));
 
-  pFoo->Value = 1.23;
-  StringCbPrintfW(pFoo->Name, 28, L"Hello, World!");
+  (*ppFoo)->Value = 1.23;
+  StringCbPrintfW((*ppFoo)->Name, 28, L"Hello, World!");
 
   return;
 }
